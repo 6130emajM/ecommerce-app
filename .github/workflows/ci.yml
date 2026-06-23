@@ -1,0 +1,33 @@
+name: CI Pipeline
+
+# Run on every push to main AND every pull request
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Get the code from your repo
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Install Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # 3. Install all your dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Run your tests (optional - remove if you don't have tests)
+      - name: Run tests
+        run: npm test -- --watchAll=false
