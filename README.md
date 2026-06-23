@@ -1,30 +1,31 @@
-# E-Commerce App
+# E-Commerce App - Firebase Edition
 
-A full-featured e-commerce application built with React, TypeScript, Redux Toolkit, and React Query.
+Full-featured e-commerce application built with React, TypeScript, Redux Toolkit, and Firebase (Firestore + Authentication).
 
 ## Features
-- Product listing with title, price, category, description, rating and image
-- Category filter dropdown powered by FakeStore API
-- Add products to shopping cart
-- Shopping cart with quantity and price tracking
-- Remove items from cart
-- Total items and total price calculation
-- Checkout functionality that clears cart and session storage
-- Cart persisted in session storage
+- Firebase Authentication (email/password + Google)
+- User profiles stored in Firestore
+- Products CRUD (add/edit/delete) directly in Firestore
+- Shopping cart with Firebase-backed checkout
+- Orders saved to Firestore with full order history
+- Protected routes for authenticated users
+- Responsive dark-themed UI
 
 ## Tech Stack
-- React
-- TypeScript
+- React + TypeScript
 - Redux Toolkit
-- React Query
+- Firebase (Auth + Firestore)
 - React Router DOM
 - Vite
 
 ## Setup Instructions
 1. Clone the repository
-2. Run npm install
-3. Run npm run dev
-4. Open browser at http://localhost:5173
+2. Copy your Firebase config into `src/firebaseConfig.ts`
+3. Run `npm install`
+4. Run `npm run dev`
 
-## API
-Uses FakeStore API at https://fakestoreapi.com/
+## Video Demo
+Watch the assignment submission video in Disco for full walkthrough (registration, product CRUD, orders, order history, profile).
+
+## Firebase Project
+Create a Firebase project, enable Authentication and Firestore, then paste your config.
