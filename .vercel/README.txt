@@ -1,0 +1,2 @@
+Vercel Project ID: YOUR_PROJECT_ID_HERE
+Vercel Org ID: YOUR_ORG_ID_HERE
